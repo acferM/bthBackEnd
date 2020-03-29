@@ -18,9 +18,21 @@ module.exports = {
 
     return response.json({ id })
   },
+
   async index(request, response) {
     const ongs = await connection('ongs').select('*')
   
     return response.json(ongs)
+  },
+
+  async email(request, response) {
+    const { id } = request.params
+
+    const ongEmail = await connection('ongs')
+    .select('email')
+    .where('id', id)
+    .first()
+
+    return response.json(ongEmail)
   }
 }

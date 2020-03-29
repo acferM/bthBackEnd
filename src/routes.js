@@ -55,4 +55,7 @@ routes.delete('/incidents/:id', celebrate({
   })
 }), incidentController.delete)
 
+// ESPECIFIC
+routes.get('/ongs/:id', ongCotroller.email)
+
 module.exports = routes
