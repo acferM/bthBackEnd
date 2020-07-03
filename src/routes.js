@@ -58,4 +58,54 @@ routes.delete('/incidents/:id', celebrate({
 // ESPECIFIC
 routes.get('/ongs/:id', ongCotroller.email)
 
+routes.get('/starter', (request, response) => {
+  return response.json([
+    {
+      id: 1,
+      image: "html+css",
+      title: "HTML5+CSS3",
+      brightness: .7
+    },
+
+    {
+      id: 2,
+      image: "JS",
+      title: "JavaScript",
+      brightness: .4
+    },
+  ])
+})
+
+routes.get('/advanced', (request, response) => {
+  return response.json([
+    {
+      id: 3,
+      image: "Echma",
+      title: "EchmaScript6",
+      brightness: .4
+    },
+
+    {
+      id: 4,
+      image: "NJS",
+      title: "NodeJS",
+      brightness: .4
+    },
+
+    {
+      id: 5,
+      image: "RJS",
+      title: "ReactJS",
+      brightness: .4
+    },
+
+    {
+      id: 6,
+      image: "RJS",
+      title: "ReactNative",
+      brightness: .4
+    }
+  ])
+})
+
 module.exports = routes
