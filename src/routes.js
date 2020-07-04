@@ -64,14 +64,16 @@ routes.get('/starter', (request, response) => {
       id: 1,
       image: "html+css",
       title: "HTML5+CSS3",
-      brightness: .7
+      brightness: .7,
+      link: 'https://www.youtube.com/watch?v=epDCjksKMok&list=PLHz_AreHm4dlAnJ_jJtV29RFxnPHDuk9o'
     },
 
     {
       id: 2,
       image: "JS",
       title: "JavaScript",
-      brightness: .4
+      brightness: .4,
+      link: 'https://www.youtube.com/watch?v=BXqUH86F-kA&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1'
     },
   ])
 })
@@ -82,28 +84,32 @@ routes.get('/advanced', (request, response) => {
       id: 3,
       image: "Echma",
       title: "EchmaScript6",
-      brightness: .4
+      brightness: .4,
+      link: 'https://app.rocketseat.com.br/node/curso-java-script-es-6/group/conceitos/lesson/introducao-3'
     },
 
     {
       id: 4,
       image: "NJS",
       title: "NodeJS",
-      brightness: .4
+      brightness: .4,
+      link: 'https://app.rocketseat.com.br/node/curso-node-js/lesson/o-que-e-api-e-node-js'
     },
 
     {
       id: 5,
       image: "RJS",
       title: "ReactJS",
-      brightness: .4
+      brightness: .4,
+      link: 'https://app.rocketseat.com.br/node/curso-react-js/lesson/o-que-e-react-js'
     },
 
     {
       id: 6,
       image: "RJS",
       title: "ReactNative",
-      brightness: .4
+      brightness: .4,
+      link: 'https://app.rocketseat.com.br/node/curso-react-native/lesson/o-que-e-react-native'
     }
   ])
 })
