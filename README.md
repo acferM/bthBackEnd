@@ -38,8 +38,47 @@ This app helps NGOs to complete some incidents like help the NGOs raise money to
 ### 🔃Routes:
 
 #### GET:
-1. https://apirestacfer.herokuapp.com/ongs -> return all the registered NGOs
+1. [/ongs](https://apirestacfer.herokuapp.com/ongs) -> return all the registered NGOs
 
-2. https://apirestacfer.herokuapp.com/profile -> return all the incidents of that NGOs (Needs Authorization)
+2. [/ongs/:id](https://apirestacfer.herokuapp.com/ongs/4dfa8d69) -> return a specific ONG
 
-3. https://apirestacfer.herokuapp.com/incidents -> return paginated incidents
+3. [/profile](https://apirestacfer.herokuapp.com/profile) -> return all the incidents of that NGOs (Needs Authorization)
+
+4. [/incidents](https://apirestacfer.herokuapp.com/incidents) -> return paginated incidents
+
+
+#### POST:
+1. /sessions -> create a session to the ONG
+
+   1.1 /sessions parameters:
+   ```json
+   {
+      id: "123123" <-- ONG id here
+   }
+   ```
+   
+2. /ongs -> create a ONG
+
+   2.1 /ongs parameters:
+   ```json
+   {
+      name: "NameOfTheONG",
+      email: "NameOfTheONG@emailservice.com",
+      whatsapp: "12345678911", <--- number must have between 10-11 numbers
+      city: "AnyCity",
+      uf: "AC"
+   }
+   ```
+3. /incidents -> create a incident
+
+   3.1 /incidents parameters:
+   ```json
+   {
+      title: "IncidentTitle",
+      description: "this is a sample of the description of a Incident",
+      value: 100,
+   }
+   ```
+   
+#### DELETE:
+/incidents/:id -> delete the incident with this id
