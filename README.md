@@ -81,4 +81,4 @@ This app helps NGOs to complete some incidents like help the NGOs raise money to
    ```
    
 #### DELETE:
-/incidents/:id -> delete the incident with this id
+ 1. /incidents/:id -> delete the incident with this id
